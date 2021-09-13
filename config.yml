@@ -31,7 +31,4 @@ apt_packagelist:
   - numix-icon-theme-circle
   - apt-transport-https
   - gnupg2
-
-
-# Atom
-# Spotify
+  - p7zip-full

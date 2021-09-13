@@ -44,4 +44,10 @@
     - { key: "/org/gtk/settings/file-chooser/show-hidden", value: "false" }
     - { key: "/org/gnome/nautilus/list-view/default-visible-columns", value: "['name', 'size', 'date_modified_with_time'] " }
     - { key: "/org/gnome/nautilus/list-view/default-column-order", value: "['name', 'size', 'date_modified_with_time', 'type', 'date_modified', 'detailed_type', 'date_accessed', 'owner', 'group', 'permissions', 'where', 'recency', 'starred']" }
-
+    - { key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors", value: "false" }
+    - { key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-background", value: "false" }
+    - { key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/palette", value: "['#282a2e', '#a54242', '#8c9440', '#de935f', '#5f819d', '#85678f', '#5e8d87', '#707880', '#373b41', '#cc6666', '#b5bd68', '#f0c674', '#81a2be', '#b294bb', '#8abeb7', '#c5c8c6']" }
+    - { key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/background-color", value: "'#1d1f21'" }
+    - { key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/foreground-color", value: "'#c5c8c6'" }
+    - { key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/bold-color", value: "'#c5c8c6'" }
+    - { key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/bold-color-same-as-fg", value: "true" }
