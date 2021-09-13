@@ -1,0 +1,33 @@
+---
+- name: install software via apt
+  become: true
+  ansible.builtin.apt:
+    update_cache: true
+    cache_valid_time: 3600
+    name: "{{ item }}"
+    state: present
+  loop: "{{ apt_packagelist }}"
+
+- name: add additional software keys
+  become: true
+  ansible.builtin.apt_key:
+    url: "{{ item }}"
+    state: present
+  loop:
+    - "https://packagecloud.io/AtomEditor/atom/gpgkey"
+
+- name: add additional repos
+  become: true
+  ansible.builtin.apt_repository:
+    repo: "{{ item }}"
+    filename: atom
+    state: present
+  loop:
+    - "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main"
+
+- name: install additional software
+  become: true
+  ansible.builtin.apt:
+    update_cache: true
+    name: atom
+    state: present

@@ -1,0 +1,37 @@
+---
+# Packages to be installed via apt.
+apt_packagelist:
+  - firefox
+  - gimp
+  - libreoffice-writer
+  - libreoffice-calc
+  - libreoffice-impress
+  - libreoffice-l10n-de
+  - libreoffice-gnome
+  - hunspell-de-ch-frami
+  - hunspell-en-gb
+  - hunspell-fr
+  - hyphen-de
+  - hyphen-en-gb
+  - hyphen-fr
+  - gnome-tweaks
+  - grub-customizer
+  - mpv
+  - keepassx
+  - zulucrypt-gui
+  - deja-dup
+  - python3-pydrive
+  - whois
+  - software-properties-common
+  - pv
+  - network-manager-openconnect-gnome
+  - network-manager-openvpn-gnome
+  - deluge
+  - gnome-shell-extensions
+  - numix-icon-theme-circle
+  - apt-transport-https
+  - gnupg2
+
+
+# Atom
+# Spotify

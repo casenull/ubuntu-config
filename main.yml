@@ -1,0 +1,17 @@
+---
+- hosts: all
+
+  vars_files:
+    - config.yml
+
+  tasks:
+    - import_tasks: tasks/apt.yml
+      tags: apt
+    - import_tasks: tasks/gnome.yml
+      tags: gnome
+    - name: Print instructions after the playbook is done.
+      ansible.builtin.debug:
+        msg:
+          - 1) Configure backup in deja-dup (Backups)
+          - 2) Install additional drivers (Additional Drivers)
+          - 3) Install ttf-mscorefonts-installer
