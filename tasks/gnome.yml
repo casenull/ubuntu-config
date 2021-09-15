@@ -51,3 +51,4 @@
     - { key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/foreground-color", value: "'#c5c8c6'" }
     - { key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/bold-color", value: "'#c5c8c6'" }
     - { key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/bold-color-same-as-fg", value: "true" }
+    - { key: "/org/gnome/gedit/preferences/editor/scheme", value: "'oblivion'" }
