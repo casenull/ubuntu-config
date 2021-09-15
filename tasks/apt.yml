@@ -15,19 +15,28 @@
     state: present
   loop:
     - "https://packagecloud.io/AtomEditor/atom/gpgkey"
+    - "https://packages.microsoft.com/keys/microsoft.asc"
 
-- name: add additional repos
+- name: Add repo for atom
   become: true
   ansible.builtin.apt_repository:
-    repo: "{{ item }}"
+    repo: "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main"
     filename: atom
     state: present
-  loop:
-    - "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main"
+
+- name: Add repo for teams
+  become: true
+  ansible.builtin.apt_repository:
+    repo: "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main"
+    filename: teams
+    state: present
 
 - name: install additional software
   become: true
   ansible.builtin.apt:
     update_cache: true
-    name: atom
+    name: "{{ item }}"
     state: present
+  loop:
+    - atom
+    - teams
