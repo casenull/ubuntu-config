@@ -16,6 +16,7 @@
   loop:
     - "https://packagecloud.io/AtomEditor/atom/gpgkey"
     - "https://packages.microsoft.com/keys/microsoft.asc"
+    - "https://static.geogebra.org/linux/office@geogebra.org.gpg.key"
 
 - name: Add repo for atom
   become: true
@@ -31,6 +32,13 @@
     filename: teams
     state: present
 
+- name: Add repo for geogebra
+  become: true
+  ansible.builtin.apt_repository:
+    repo: "deb [arch=amd64] http://www.geogebra.net/linux/ stable main"
+    filename: geogebra
+    state: present
+
 - name: install additional software
   become: true
   ansible.builtin.apt:
@@ -40,3 +48,4 @@
   loop:
     - atom
     - teams
+    - geogebra-classic
