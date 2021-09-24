@@ -17,6 +17,7 @@
     - "https://packagecloud.io/AtomEditor/atom/gpgkey"
     - "https://packages.microsoft.com/keys/microsoft.asc"
     - "https://static.geogebra.org/linux/office@geogebra.org.gpg.key"
+    - "https://github.com/retorquere/zotero-deb/releases/download/apt-get/deb.gpg.key"
 
 - name: Add repo for atom
   become: true
@@ -39,6 +40,13 @@
     filename: geogebra
     state: present
 
+- name: Add repo for Zotero
+  become: true
+  ansible.builtin.apt_repository:
+    repo: "deb https://github.com/retorquere/zotero-deb/releases/download/apt-get/ ./"
+    filename: zotero
+    state: present
+
 - name: install additional software
   become: true
   ansible.builtin.apt:
@@ -49,3 +57,4 @@
     - atom
     - teams
     - geogebra-classic
+    - zotero
