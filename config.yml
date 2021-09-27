@@ -31,5 +31,10 @@ apt_packagelist:
   - gnome-shell-extensions
   - numix-icon-theme-circle
   - apt-transport-https
+  - ca-certificates
+  - curl
+  - gnupg
   - gnupg2
+  - lsb-release
   - p7zip-full
+  
