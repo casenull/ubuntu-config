@@ -35,6 +35,4 @@ apt_packagelist:
   - curl
   - gnupg
   - gnupg2
-  - lsb-release
   - p7zip-full
-  

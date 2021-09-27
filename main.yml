@@ -9,6 +9,8 @@
       tags: apt
     - import_tasks: tasks/gnome.yml
       tags: gnome
+    - import_tasks: tasks/docker.yml
+      tags: docker
     - name: Print instructions after the playbook is done.
       ansible.builtin.debug:
         msg:
