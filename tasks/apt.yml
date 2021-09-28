@@ -18,6 +18,7 @@
     - "https://packages.microsoft.com/keys/microsoft.asc"
     - "https://static.geogebra.org/linux/office@geogebra.org.gpg.key"
     - "https://github.com/retorquere/zotero-deb/releases/download/apt-get/deb.gpg.key"
+    - "https://www.pgadmin.org/static/packages_pgadmin_org.pub"
 
 - name: Add repo for atom
   become: true
@@ -47,6 +48,11 @@
     filename: zotero
     state: present
 
+- name: Add repo for pgadmin4
+  become: true
+  ansible.builtin.apt_repository:
+    repo: "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/{{ ansible_distribution_release }} pgadmin4 main"
+
 - name: install additional software
   become: true
   ansible.builtin.apt:
@@ -58,3 +64,4 @@
     - teams
     - geogebra-classic
     - zotero
+    - pgadmin4-desktop
