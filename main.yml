@@ -11,6 +11,8 @@
       tags: gnome
     - import_tasks: tasks/docker.yml
       tags: docker
+    - import_tasks: tasks/wireshark.yml
+      tags: wireshark
     - name: Print instructions after the playbook is done.
       ansible.builtin.debug:
         msg:

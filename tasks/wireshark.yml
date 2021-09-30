@@ -1,0 +1,19 @@
+---
+- name: add wireshark ppa
+  become: true
+  ansible.builtin.apt_repository:
+    repo: ppa:wireshark-dev/stable
+
+- name: prepare debconf for wireshark installation
+  become: true
+  ansible.builtin.debconf:
+    name: wireshark-common
+    question: wireshark-common/install-setuid
+    value: 'true'
+    vtype: select
+
+- name: install wireshark
+  become: true
+  ansible.builtin.apt:
+    name: wireshark
+    state: present
