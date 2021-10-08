@@ -35,5 +35,6 @@ apt_packagelist:
   - gnupg
   - gnupg2
   - p7zip-full
+  - net-tools
 
 docker_compose_version: "v2.0.1"
