@@ -13,6 +13,8 @@
       tags: docker
     - import_tasks: tasks/wireshark.yml
       tags: wireshark
+    - import_tasks: tasks/protonmail-bridge.yml
+      tags: protonmail-bridge
     - name: Print instructions after the playbook is done.
       ansible.builtin.debug:
         msg:

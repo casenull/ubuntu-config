@@ -19,7 +19,7 @@ This playbook documents the configuration of my Ubuntu laptop I use for school.
 
 ## Additional information
 
-This playbook can also be run using the tags `apt`,`gnome`,`docker` or`wireshark` to run only specific routines.
+This playbook can also be run using the tags `apt`,`gnome`,`docker`, `wireshark` or `protonmail-bridge` to run only specific routines.
 
     # Run the Wireshark installation routine individually
     ansible-playbook main.yml -K --tags wireshark
