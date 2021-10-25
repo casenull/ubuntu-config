@@ -36,5 +36,10 @@ apt_packagelist:
   - gnupg2
   - p7zip-full
   - net-tools
+  - texlive
+  - texlive-latex-extra
+  - texlive-science
+  - texlive-lang-german
+  - latexmk
 
 docker_compose_version: "v2.0.1"

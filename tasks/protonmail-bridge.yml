@@ -13,6 +13,7 @@
     protonmail_bridge_package: "protonmail-bridge_{{ protonmail_bridge_version }}-{{ protonmail_bridge_release }}_amd64.deb"
 
 - name: installation
-  become: True
+  become: true
+  become_user: root
   ansible.builtin.apt:
     deb: "https://protonmail.com/download/bridge/{{ protonmail_bridge_package }}"
