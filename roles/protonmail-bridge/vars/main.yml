@@ -1,0 +1,7 @@
+---
+protonmail_bridge_pkgbuild: "{{ lookup('url', 'https://protonmail.com/download/bridge/PKGBUILD') }}"
+protonmail_bridge_version: "{{ protonmail_bridge_pkgbuild | regex_search('(?<=pkgver=).*?(?=,)') }}"
+protonmail_bridge_release: "{{ protonmail_bridge_pkgbuild | regex_search('(?<=pkgrel=).*?(?=,)') }}"
+protonmail_bridge_number: "{{ protonmail_bridge_version }}-{{ protonmail_bridge_release }}"
+protonmail_bridge_package: "protonmail-bridge_{{ protonmail_bridge_number }}_amd64.deb"
+protonmail_bridge_url: "https://protonmail.com/download/bridge/{{ protonmail_bridge_package }}"

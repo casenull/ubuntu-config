@@ -1,0 +1,22 @@
+---
+- name: package facts
+  ansible.builtin.package_facts:
+    manager: auto
+
+- name: installation
+  block:
+    - name: download
+      ansible.builtin.get_url:
+        url: "{{ protonmail_bridge_url }}"
+        dest: "/tmp/{{ protonmail_bridge_package }}"
+
+    - name: installation
+      ansible.builtin.apt:
+        deb: "/tmp/{{ protonmail_bridge_package }}"
+
+    - name: remove
+      ansible.builtin.file:
+        name: "/tmp/{{ protonmail_bridge_package }}"
+        state: absent
+  # Execute only if protonmail-bridge is not installed or has an old version
+  when: "'protonmail-bridge' not in ansible_facts.packages or ansible_facts.packages['protonmail-bridge'][0].version != protonmail_bridge_number"

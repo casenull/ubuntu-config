@@ -1,25 +1,21 @@
 ---
-- name: add wireshark ppa
-  become: true
+- name: repository
   ansible.builtin.apt_repository:
     repo: ppa:wireshark-dev/stable
 
-- name: prepare debconf for wireshark installation
-  become: true
+- name: prerequisites - debconf
   ansible.builtin.debconf:
     name: wireshark-common
     question: wireshark-common/install-setuid
     value: 'true'
     vtype: select
 
-- name: install wireshark
-  become: true
+- name: installation
   ansible.builtin.apt:
     name: wireshark
     state: present
 
-- name: add user running the playbook to wireshark group
-  become: true
+- name: user to group
   ansible.builtin.user:
     name: "{{ ansible_env.USER }}"
     groups: wireshark

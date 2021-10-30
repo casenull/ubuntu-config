@@ -41,5 +41,3 @@ apt_packagelist:
   - texlive-science
   - texlive-lang-german
   - latexmk
-
-docker_compose_version: "v2.0.1"
