@@ -12,5 +12,7 @@
 
   roles:
       - { role: protonmail-bridge, become: true, tags: protonmail-bridge }
+      - { role: protonvpn, become: true, tags: protonvpn }
       - { role: docker, become: true, tags: docker }
       - { role: wireshark, become: true, tags: wireshark }
+      - { role: gns3, become: true, tags: gns3 }

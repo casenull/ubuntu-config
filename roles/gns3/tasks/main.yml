@@ -1,0 +1,9 @@
+---
+- name: repository
+  ansible.builtin.apt_repository:
+    repo: ppa:gns3/ppa
+
+- name: installation
+  ansible.builtin.apt:
+    name: gns3-gui
+    state: present

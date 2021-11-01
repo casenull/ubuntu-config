@@ -1,0 +1,17 @@
+---
+- name: keyring
+  ansible.builtin.apt_key:
+    url: "https://protonvpn.com/download/public_key.asc"
+    keyring: "{{ protonvpn_keyring }}"
+
+- name: repository
+  ansible.builtin.apt_repository:
+    repo: "deb [signed-by={{ protonvpn_keyring }}] https://repo.protonvpn.com/debian stable main"
+    filename: protonvpn-stable
+    state: present
+
+- name: installation
+  ansible.builtin.apt:
+    update_cache: true
+    name: protonvpn-gui
+    state: present
