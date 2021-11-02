@@ -37,7 +37,14 @@
     - { key: "/org/gnome/settings-daemon/plugins/media-keys/home", value: "['<Super>e']" }
     - { key: "/org/gnome/settings-daemon/plugins/media-keys/terminal", value: "['<Super>Return']" }
     - { key: "/org/gnome/settings-daemon/plugins/media-keys/screenshot", value: "@as []" }
-    - { key: "/org/gnome/shell/favorite-apps", value: "['firefox.desktop', 'org.gnome.Nautilus.desktop']" }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding", value: "'<Alt><Super>Up'" }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command", value: "'xrandr -o normal'" }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name", value: "'Screen Orientation Normal'" }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding", value: "'<Alt><Super>Right'" }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command", value: "'xrandr -o right'" }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name", value: "'Screen Orientation Right'" }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings", value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']" }
+    - { key: "/org/gnome/shell/favorite-apps", value: "['firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Evolution.desktop']" }
     - { key: "/org/gnome/shell/enabled-extensions", value: "['user-theme@gnome-shell-extensions.gcampax.github.com']" }
     - { key: "/org/gnome/shell/extensions/user-theme/name", value: "'Yaru-dark'" }
     - { key: "/org/gnome/nautilus/preferences/default-folder-viewer", value: "'list-view'" }
