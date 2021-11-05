@@ -1,0 +1,14 @@
+---
+- name: repository key
+  ansible.builtin.apt_key:
+    url: "https://packages.microsoft.com/keys/microsoft.asc"
+
+- name: repository
+  ansible.builtin.apt_repository:
+    repo: "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main"
+    filename: zotero
+
+- name: installation
+  ansible.builtin.apt:
+    name: teams
+    state: present

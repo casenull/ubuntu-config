@@ -1,0 +1,9 @@
+---
+- name: repository
+  ansible.builtin.apt_repository:
+    repo: ppa:apandada1/xournalpp-stable
+
+- name: installation
+  ansible.builtin.apt:
+    name: xournalpp
+    state: present

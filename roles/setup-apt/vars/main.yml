@@ -1,5 +1,5 @@
 ---
-apt_packagelist:
+setup_apt_packagelist:
   - firefox
   - gimp
   - libreoffice-writer
@@ -41,3 +41,4 @@ apt_packagelist:
   - texlive-science
   - texlive-lang-german
   - latexmk
+  - audacity

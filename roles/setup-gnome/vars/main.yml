@@ -1,0 +1,51 @@
+---
+setup_gnome_settings:
+  - { key: "/org/gnome/desktop/background/picture-uri", value: "''" }
+  - { key: "/org/gnome/desktop/background/color-shading-type", value: "'solid'" }
+  - { key: "/org/gnome/desktop/background/primary-color", value: "'#2b2b2b'" }
+  - { key: "/org/gnome/desktop/interface/icon-theme", value: "'Numix-Circle'" }
+  - { key: "/org/gnome/desktop/interface/show-battery-percentage", value: "true" }
+  - { key: "/org/gnome/desktop/interface/enable-animations", value: "false" }
+  - { key: "/org/gnome/desktop/interface/enable-hot-corners", value: "false" }
+  - { key: "/org/gnome/desktop/privacy/remember-app-usage", value: "false" }
+  - { key: "/org/gnome/desktop/privacy/remember-recent-files", value: "false" }
+  - { key: "/org/gnome/desktop/calendar/show-weekdate", value: "true" }
+  - { key: "/org/gnome/shell/extensions/dash-to-dock/animate-show-apps", value: "false" }
+  - { key: "/org/gnome/shell/disabled-extensions", value: ['desktop-icons@csoriano'] }
+  - { key: "/org/gnome/shell/extensions/dash-to-dock/preferred-monitor", value: "0" }
+  - { key: "/org/gnome/desktop/interface/gtk-theme", value: "'Yaru-dark'" }
+  - { key: "/org/gnome/shell/extensions/dash-to-dock/dock-fixed", value: "false" }
+  - { key: "/org/gnome/shell/extensions/dash-to-dock/dock-position", value: "'BOTTOM'" }
+  - { key: "/org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size", value: "30" }
+  - { key: "/org/gnome/desktop/notifications/show-in-lock-screen", value: "false" }
+  - { key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled", value: "true" }
+  - { key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-automatic", value: "false" }
+  - { key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-from", value: "17.0" }
+  - { key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-to", value: "8.0" }
+  - { key: "/org/gnome/settings-daemon/plugins/color/night-light-temperature", value: "uint32 3800" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/home", value: "['<Super>e']" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/terminal", value: "['<Super>Return']" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/screenshot", value: "@as []" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding", value: "'<Alt><Super>Up'" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command", value: "'xrandr -o normal'" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name", value: "'Screen Orientation Normal'" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding", value: "'<Alt><Super>Right'" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command", value: "'xrandr -o right'" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name", value: "'Screen Orientation Right'" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings", value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']" }
+  - { key: "/org/gnome/shell/favorite-apps", value: "['firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Evolution.desktop']" }
+  - { key: "/org/gnome/shell/enabled-extensions", value: "['user-theme@gnome-shell-extensions.gcampax.github.com']" }
+  - { key: "/org/gnome/shell/extensions/user-theme/name", value: "'Yaru-dark'" }
+  - { key: "/org/gnome/nautilus/preferences/default-folder-viewer", value: "'list-view'" }
+  - { key: "/org/gtk/settings/file-chooser/show-hidden", value: "false" }
+  - { key: "/org/gnome/nautilus/list-view/default-visible-columns", value: "['name', 'size', 'date_modified_with_time'] " }
+  - { key: "/org/gnome/nautilus/list-view/default-column-order", value: "['name', 'size', 'date_modified_with_time', 'type', 'date_modified', 'detailed_type', 'date_accessed', 'owner', 'group', 'permissions', 'where', 'recency', 'starred']" }
+  - { key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors", value: "false" }
+  - { key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-background", value: "false" }
+  - { key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/palette", value: "['#282a2e', '#a54242', '#8c9440', '#de935f', '#5f819d', '#85678f', '#5e8d87', '#707880', '#373b41', '#cc6666', '#b5bd68', '#f0c674', '#81a2be', '#b294bb', '#8abeb7', '#c5c8c6']" }
+  - { key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/background-color", value: "'#1d1f21'" }
+  - { key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/foreground-color", value: "'#c5c8c6'" }
+  - { key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/bold-color", value: "'#c5c8c6'" }
+  - { key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/bold-color-same-as-fg", value: "true" }
+  - { key: "/org/gnome/gedit/preferences/editor/scheme", value: "'oblivion'" }
+  - { key: "/org/gnome/desktop/session/idle-delay", value: "uint32 900" }

@@ -1,0 +1,14 @@
+---
+- name: Make sure python3-psutil is installed.
+  ansible.builtin.apt:
+    name: python3-psutil
+    state: present
+  become: true
+
+- name: User Configuration
+  community.general.dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+    state: present
+  loop: "{{ setup_gnome_settings }}"
+  become: false

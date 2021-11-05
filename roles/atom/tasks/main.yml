@@ -1,0 +1,14 @@
+---
+- name: repository key
+  ansible.builtin.apt_key:
+    url: "https://packagecloud.io/AtomEditor/atom/gpgkey"
+
+- name: repository
+  ansible.builtin.apt_repository:
+    repo: "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main"
+    filename: zotero
+
+- name: installation
+  ansible.builtin.apt:
+    name: atom
+    state: present

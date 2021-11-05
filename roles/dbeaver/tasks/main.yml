@@ -1,0 +1,17 @@
+---
+# ToDo: Add condition that only downloads the package if the latest version
+# of dbeaver is not installed
+
+- name: download
+  ansible.builtin.get_url:
+    url: "{{ dbeaver_url }}"
+    dest: "/tmp/{{ dbeaver_package }}"
+
+- name: installation
+  ansible.builtin.apt:
+    deb: "/tmp/{{ dbeaver_package }}"
+
+- name: remove
+  ansible.builtin.file:
+    name: "/tmp/{{ dbeaver_package }}"
+    state: absent
