@@ -2,6 +2,8 @@
 setup_apt_packagelist:
   - firefox
   - gimp
+  - evolution
+  - evolution-ews
   - libreoffice-writer
   - libreoffice-calc
   - libreoffice-impress

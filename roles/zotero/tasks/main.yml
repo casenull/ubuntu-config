@@ -6,7 +6,6 @@
 - name: repository
   ansible.builtin.apt_repository:
     repo: "deb https://github.com/retorquere/zotero-deb/releases/download/apt-get/ ./"
-    filename: zotero
 
 - name: installation
   ansible.builtin.apt:
