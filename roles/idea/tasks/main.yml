@@ -1,0 +1,30 @@
+---
+# ToDo: Add condition that only downloads the package if the latest version
+# of idea is not installed
+
+- name: download
+  ansible.builtin.get_url:
+    url: "{{ idea_url }}"
+    dest: "/tmp/{{ idea_package }}"
+
+- name: folder
+  ansible.builtin.file:
+    name: "{{ idea_folder }}"
+    owner: root
+    group: root
+    mode: 0755
+    state: directory
+
+- name: extract
+  ansible.builtin.unarchive:
+    src: "/tmp/{{ idea_package }}"
+    dest: "{{ idea_folder }}"
+    extra_opts: [--strip-components=1]
+
+- name: link
+  ansible.builtin.template:
+    src: jetbrains-idea.desktop.j2
+    dest: /usr/share/applications/jetbrains-idea.desktop
+    owner: root
+    group: root
+    mode: 0644
