@@ -9,6 +9,7 @@
     - { role: protonmail-bridge, become: true, tags: protonmail-bridge }
     - { role: idea, become: true, tags: idea }
     - { role: docker, become: true, tags: docker }
+    - { role: foliate, become: true, tags: foliate }
     - { role: protonvpn, become: true, tags: protonvpn }
     - { role: wireshark, become: true, tags: wireshark }
     - { role: gns3, become: true, tags: gns3 }

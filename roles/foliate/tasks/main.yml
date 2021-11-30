@@ -1,0 +1,9 @@
+---
+- name: repository
+  ansible.builtin.apt_repository:
+    repo: ppa:apandada1/foliate
+
+- name: installation
+  ansible.builtin.apt:
+    name: foliate
+    state: present
