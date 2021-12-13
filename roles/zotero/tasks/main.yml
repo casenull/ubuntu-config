@@ -1,11 +1,11 @@
 ---
 - name: repository key
   ansible.builtin.apt_key:
-    url: "https://github.com/retorquere/zotero-deb/releases/download/apt-get/deb.gpg.key"
+    url: "https://downloads.sourceforge.net/project/zotero-deb/deb.gpg.key"
 
 - name: repository
   ansible.builtin.apt_repository:
-    repo: "deb https://github.com/retorquere/zotero-deb/releases/download/apt-get/ ./"
+    repo: "deb [by-hash=force] https://downloads.sourceforge.net/project/zotero-deb/ ./"
 
 - name: installation
   ansible.builtin.apt:
