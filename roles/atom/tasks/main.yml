@@ -6,7 +6,7 @@
 - name: repository
   ansible.builtin.apt_repository:
     repo: "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main"
-    filename: zotero
+    filename: atom
 
 - name: installation
   ansible.builtin.apt:
