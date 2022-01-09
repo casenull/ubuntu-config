@@ -1,0 +1,29 @@
+---
+- name: download
+  ansible.builtin.get_url:
+    url: "{{ eclipse_url }}"
+    dest: "/tmp/{{ eclipse_archive }}"
+
+- name: folder
+  ansible.builtin.file:
+    name: "{{ eclipse_folder }}"
+    owner: root
+    group: root
+    mode: 0755
+    state: directory
+
+- name: extract
+  ansible.builtin.unarchive:
+    src: "/tmp/{{ eclipse_archive }}"
+    dest: "{{ eclipse_folder }}"
+    extra_opts: [--strip-components=1]
+    owner: root
+    group: root
+
+- name: link
+  ansible.builtin.template:
+    src: eclipse.desktop.j2
+    dest: /usr/share/applications/eclipse-{{ eclipse_version }}.desktop
+    owner: root
+    group: root
+    mode: 0644
