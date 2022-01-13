@@ -1,9 +1,7 @@
 ---
 eclipse_folder_root: "/opt/eclipse"
-
 eclipse_version: "2021-12"
-
-eclipse_archive: "eclipse-java-{{ eclipse_version }}-R-linux-gtk-x86_64.tar.gz"
-eclipse_url: "https://rhlx01.hs-esslingen.de/pub/Mirrors/eclipse/technology/epp/downloads/release/{{ eclipse_version }}/R/{{ eclipse_archive }}"
-
 eclipse_folder: "{{ eclipse_folder_root }}/{{ eclipse_version }}"
+
+eclipse_archive: "eclipse-jee-{{ eclipse_version }}-R-linux-gtk-x86_64.tar.gz"
+eclipse_url: "https://rhlx01.hs-esslingen.de/pub/Mirrors/eclipse/technology/epp/downloads/release/{{ eclipse_version }}/R/{{ eclipse_archive }}"

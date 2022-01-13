@@ -1,5 +1,0 @@
----
-idea_folder: "/opt/idea"
-idea_version: "2021.2.3"
-idea_package: "ideaIC-{{ idea_version }}.tar.gz"
-idea_url: "https://download.jetbrains.com/idea/{{ idea_package }}"

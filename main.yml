@@ -8,9 +8,9 @@
     - { role: teams, become: true, tags: teams }
     - { role: zotero, become: true, tags: zotero }
     - { role: protonmail-bridge, become: true, tags: protonmail-bridge }
-    - { role: idea, become: true, tags: idea }
+    - { role: jetbrains-idea, become: true, tags: jetbrains-idea }
     - { role: docker, become: true, tags: docker }
-    - { role: eclipse, become: true, tags: eclipse }
+    - { role: eclipse-jee, become: true, tags: eclipse-jee }
     - { role: protonvpn, become: true, tags: protonvpn }
     - { role: wireshark, become: true, tags: wireshark }
     - { role: gns3, become: true, tags: gns3 }

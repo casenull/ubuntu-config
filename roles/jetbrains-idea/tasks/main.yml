@@ -1,7 +1,4 @@
 ---
-# ToDo: Add condition that only downloads the package if the latest version
-# of idea is not installed
-
 - name: download
   ansible.builtin.get_url:
     url: "{{ idea_url }}"
@@ -24,7 +21,7 @@
 - name: link
   ansible.builtin.template:
     src: jetbrains-idea.desktop.j2
-    dest: /usr/share/applications/jetbrains-idea.desktop
+    dest: /usr/share/applications/jetbrains-idea{{ idea_product }}-{{ idea_version }}.desktop
     owner: root
     group: root
     mode: 0644

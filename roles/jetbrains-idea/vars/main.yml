@@ -1,0 +1,8 @@
+---
+idea_product: "IC"
+idea_folder_root: "/opt/idea{{ idea_product }}"
+idea_version: "2021.3.1"
+idea_folder: "{{ idea_folder_root }}/{{ idea_version }}"
+
+idea_package: "idea{{ idea_product }}-{{ idea_version }}.tar.gz"
+idea_url: "https://download.jetbrains.com/idea/{{ idea_package }}"
