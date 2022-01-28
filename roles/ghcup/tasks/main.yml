@@ -1,0 +1,13 @@
+---
+- name: download
+  ansible.builtin.get_url:
+    url: "{{ ghcup_url }}"
+    dest: "{{ ghcup_bin }}/ghcup"
+    mode: 0755
+  become: false
+
+- name: bashrc environment variable
+  ansible.builtin.lineinfile:
+    path: "{{ ansible_env.HOME }}/.bashrc"
+    line: 'export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"'
+  become: false
