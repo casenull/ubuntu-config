@@ -11,12 +11,14 @@ setup_gnome_settings:
   - { key: "/org/gnome/desktop/privacy/remember-recent-files", value: "false" }
   - { key: "/org/gnome/desktop/calendar/show-weekdate", value: "true" }
   - { key: "/org/gnome/shell/extensions/dash-to-dock/animate-show-apps", value: "false" }
+  - { key: "/org/gnome/shell/extensions/dash-to-dock/extend-height", value: "false" }
+  - { key: "/org/gnome/shell/extensions/dash-to-dock/force-straight-corner", value: "true" }
   - { key: "/org/gnome/shell/disabled-extensions", value: ['desktop-icons@csoriano'] }
   - { key: "/org/gnome/shell/extensions/dash-to-dock/preferred-monitor", value: "0" }
   - { key: "/org/gnome/desktop/interface/gtk-theme", value: "'Yaru-dark'" }
   - { key: "/org/gnome/shell/extensions/dash-to-dock/dock-fixed", value: "false" }
   - { key: "/org/gnome/shell/extensions/dash-to-dock/dock-position", value: "'BOTTOM'" }
-  - { key: "/org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size", value: "30" }
+  - { key: "/org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size", value: "40" }
   - { key: "/org/gnome/desktop/notifications/show-in-lock-screen", value: "false" }
   - { key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled", value: "true" }
   - { key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-automatic", value: "false" }
