@@ -31,3 +31,9 @@
     name: "{{ ansible_env.USER }}"
     groups: docker
     append: true
+
+- name: bashrc postgres
+  ansible.builtin.lineinfile:
+    path: "{{ ansible_env.HOME }}/.bashrc"
+    line: 'export PGHOST="localhost"'
+  become: false
