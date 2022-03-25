@@ -1,5 +1,5 @@
 ---
-eclipse_folder_root: "/opt/eclipse"
+eclipse_folder_root: "/opt/eclipse-jee"
 eclipse_version: "2021-12"
 eclipse_folder: "{{ eclipse_folder_root }}/{{ eclipse_version }}"
 

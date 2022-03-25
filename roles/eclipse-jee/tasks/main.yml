@@ -22,8 +22,8 @@
 
 - name: link
   ansible.builtin.template:
-    src: eclipse.desktop.j2
-    dest: /usr/share/applications/eclipse-{{ eclipse_version }}.desktop
+    src: eclipse-jee.desktop.j2
+    dest: /usr/share/applications/eclipse-jee-{{ eclipse_version }}.desktop
     owner: root
     group: root
     mode: 0644
