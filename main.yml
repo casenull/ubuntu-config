@@ -3,16 +3,17 @@
   roles:
     - { role: setup-apt, become: true, tags: apt }
     - { role: setup-gnome, tags: gnome }
-    - { role: atom, become: true, tags: atom }
+    #- { role: atom, become: true, tags: atom }
     - { role: vscodium, become: true, tags: vscodium }
-    - { role: teams, become: true, tags: teams }
+    #- { role: teams, become: true, tags: teams }
     - { role: zotero, become: true, tags: zotero }
     - { role: protonmail-bridge, become: true, tags: protonmail-bridge }
-    - { role: jetbrains-idea, become: true, tags: jetbrains-idea }
+    #- { role: jetbrains-idea, become: true, tags: jetbrains-idea }
     - { role: docker, become: true, tags: docker }
     - { role: eclipse-jee, become: true, tags: eclipse-jee }
     - { role: protonvpn, become: true, tags: protonvpn }
     - { role: wireshark, become: true, tags: wireshark }
     - { role: gns3, become: true, tags: gns3 }
-    - { role: dbeaver, become: true, tags: dbeaver }
+    #- { role: dbeaver, become: true, tags: dbeaver }
     - { role: ghcup, become: true, tags: ghcup }
+    - { role: steam, become: true, tags: steam }
