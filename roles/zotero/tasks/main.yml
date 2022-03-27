@@ -1,11 +1,13 @@
 ---
-- name: repository key
+- name: keyring
   ansible.builtin.apt_key:
-    url: "https://downloads.sourceforge.net/project/zotero-deb/deb.gpg.key"
+    url: "https://raw.githubusercontent.com/retorquere/zotero-deb/master/zotero-archive-keyring.gpg"
+    keyring: "{{ zotero_keyring }}"
 
 - name: repository
   ansible.builtin.apt_repository:
-    repo: "deb [by-hash=force] https://downloads.sourceforge.net/project/zotero-deb/ ./"
+    repo: "deb [signed-by={{ zotero_keyring }} by-hash=force] https://zotero.retorque.re/file/apt-package-archive ./"
+    filename: zotero
 
 - name: installation
   ansible.builtin.apt:
