@@ -1,5 +1,5 @@
 ---
-ghcup_version: "0.1.17.4"
+ghcup_version: "0.1.17.7"
 ghcup_url_base: "https://downloads.haskell.org/~ghcup/"
 ghcup_url: "{{ ghcup_url_base }}/{{ ghcup_version }}/x86_64-linux-ghcup-{{ ghcup_version}}"
 

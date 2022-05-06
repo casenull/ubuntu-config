@@ -39,8 +39,18 @@ setup_apt_packagelist:
   - p7zip-full
   - net-tools
   - texlive
-  - texlive-latex-extra
-  - texlive-science
+  - texlive-bibtex-extra
+  - texlive-extra-utils
+  - texlive-font-utils
+  - texlive-fonts-extra
+  - texlive-fonts-recommended
+  - texlive-lang-english
+  - texlive-lang-european
   - texlive-lang-german
+  - texlive-latex-extra
+  - texlive-luatex
+  - texlive-metapost
+  - texlive-pstricks
+  - texlive-science
   - latexmk
   - audacity
