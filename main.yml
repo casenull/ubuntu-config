@@ -17,3 +17,5 @@
     #- { role: dbeaver, become: true, tags: dbeaver }
     - { role: ghcup, become: true, tags: ghcup }
     - { role: steam, become: true, tags: steam }
+    - { role: maven, become: true, tags: maven }
+    - { role: xournalpp, become: true, tags: xournalpp }

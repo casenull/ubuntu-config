@@ -1,0 +1,8 @@
+---
+maven_folder_root: "/opt/apache-maven"
+maven_version: "3.8.5"
+maven_folder: "{{ maven_folder_root }}-{{ maven_version }}"
+maven_link: "/opt/maven"
+
+maven_archive: "apache-maven-{{ maven_version }}-bin.tar.gz"
+maven_url: "https://dlcdn.apache.org/maven/maven-3/{{ maven_version }}/binaries/{{ maven_archive }}"

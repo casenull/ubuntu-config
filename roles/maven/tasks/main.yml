@@ -1,0 +1,35 @@
+---
+- name: download
+  ansible.builtin.get_url:
+    url: "{{ maven_url }}"
+    dest: "/tmp/{{ maven_archive }}"
+
+- name: folder
+  ansible.builtin.file:
+    name: "{{ maven_folder }}"
+    owner: root
+    group: root
+    mode: 0755
+    state: directory
+
+- name: extract
+  ansible.builtin.unarchive:
+    src: "/tmp/{{ maven_archive }}"
+    dest: "{{ maven_folder }}"
+    extra_opts: [--strip-components=1]
+    owner: root
+    group: root
+
+- name: link
+  ansible.builtin.file:
+    src: "{{ maven_folder }}"
+    dest: "{{ maven_link }}"
+    state: link
+
+- name: envvars
+  ansible.builtin.template:
+    src: maven.sh.j2
+    dest: /etc/profile.d/maven.sh
+    owner: root
+    group: root
+    mode: 0644
